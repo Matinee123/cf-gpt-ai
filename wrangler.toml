@@ -1,29 +1,14 @@
 name = "cf-ai-chat"
 main = "src/worker.js"
-compatibility_date = "2025-08-25"
+compatibility_date = "2026-01-07"
 
 [ai]
 binding = "AI"
 
-# KV 存储配置（可选，用于聊天历史）
-# 需要先在 Cloudflare Dashboard 创建 KV 命名空间
-# 然后替换下面的 id 和 preview_id
-[[kv_namespaces]]
-binding = "CHAT_HISTORY"
-id = "a6d5e4f7564d4d6aa21aa4832ecb4449"
-preview_id = "a6d5e4f7564d4d6aa21aa4832ecb4449"
+kv_namespaces = [
+  { binding = "CHAT_HISTORY", id = "a6d5e4f7564d4d6aa21aa4832ecb4449", preview_id = "a6d5e4f7564d4d6aa21aa4832ecb4449" }
+]
 
-# 环境变量配置
-# 部署前请修改为安全的密码
-[vars]
-CHAT_PASSWORD = "123"
-
-
-
-
-
-
-
-
-
-
+# 建议删除下面这行，用 wrangler secret put CHAT_PASSWORD 代替
+# [vars]
+# CHAT_PASSWORD = "123"
