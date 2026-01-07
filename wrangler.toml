@@ -10,13 +10,14 @@ binding = "AI"
 # 然后替换下面的 id 和 preview_id
 [[kv_namespaces]]
 binding = "CHAT_HISTORY"
-id = "hgsai"
-preview_id = "hgsai"
+id = "hgsai_a6d5e4f7564d4d6aa21aa4832ecb4449"
+preview_id = "hgsai_a6d5e4f7564d4d6aa21aa4832ecb4449"
 
 # 环境变量配置
 # 部署前请修改为安全的密码
 [vars]
-CHAT_PASSWORD = "a6d5e4f7564d4d6aa21aa4832ecb4449"
+CHAT_PASSWORD = "123"
+
 
 
 
